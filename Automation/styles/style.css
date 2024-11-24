@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&family=Roboto+Slab:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    background: rgba(147, 193, 212, 0.46);
+}
+
+/* Variables */
+:root {
+    --primary-font-family: 'Righteous', sans-serif;
+    --light-white: #f5f8fa;
+    --gray: #5e6278;
+    --gray-1: #e3e3e3;
+}
+
+* {
+    font-size: 14px;
+    list-style: none;
+}
+
+.button,
+.button:focus,
+.button:active,
+.button:hover {
+    text-decoration: none;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #7BB2CA 14.47%, rgba(5, 32, 86, 0.70) 55.11%, #7BB2CA 99.91%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-size: 13px;
+    color: #f5f8fa;
+    font-weight: 600;
+    border: none;
+    width: fit-content;
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+    border: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+}
+
+.heading>h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #19176D;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 800 !important;
+    line-height: normal;
+}
+
+.main {
+    background-image: url(../images/bg.png);
+    width: 1000px;
+    padding: 1rem;
+    /* padding-bottom: 5em; */
+    /* gap: 2rem; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.clientHeading {
+    display: flex;
+    flex-direction: column;
+    margin-left: 140px;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.clientHeading>h2 {
+    color: #f5f8fa;
+    max-width: 17em;
+    font-size: 19px;
+}
+
+.automationCard {
+    background: url(../images/bg.png);
+    width: 700px;
+    display: flex;
+    margin: auto;
+    height: 250px !important;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.automationCard>img {
+    width: 20rem;
+}
+
+.automationCards {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+}
+
+.automationCards>img {
+    width: 17rem;
+}
+
+.firstDetail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.firstDetail>h3 {
+    font-size: 19px;
+    color: #fff;
+    max-width: 12em;
+}
+
+.firstDetail>p {
+    max-width: 26em;
+    font-size: 13px;
+    color: #fff;
+}
+
+.firstDetail>button {
+    display: flex;
+    justify-content: space-around;
+    width: fit-content;
+}
+
+.secondDetail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.secondDetail>h3 {
+    font-size: 29px;
+    color: #fff;
+    max-width: 12em;
+}
+
+.secondDetail>p {
+    max-width: 26em;
+    font-size: 20px;
+    color: #fff;
+}
+
+.secondDetail>button {
+    display: flex;
+    justify-content: space-around;
+    width: fit-content;
+}
+
+#loader {
+    width: 148px;
+    height: 148px;
+    background-color: white;
+    border: 5px solid #FFF;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -24px; /* Half of the loader's height */
+    margin-left: -24px; /* Half of the loader's width */
+    z-index: 1000; /* Make sure it appears above other elements */
+}
+
+@keyframes rotation {
+    to {
+        transform: rotate(360deg);
+    }
+}

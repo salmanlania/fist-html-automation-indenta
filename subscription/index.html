@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<style>
+    button {
+        cursor: pointer;
+        padding: 0.5rem;
+        /* padding-left: 6rem;
+        padding-right: 9rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem; */
+        text-align: center;
+        /* border-radius: 10px;
+        background: linear-gradient(150deg, #7BB2CA 10.47%, rgba(162, 178, 210, 0.7)5.11%, #7BB2CA 79.91%);
+        box-shadow: 3px 5px 4px 2px rgba(0, 0, 0, 0.25); */
+        border-radius: 6px;
+        background: linear-gradient(4500deg, #7BB2CA 14.47%, rgba(5, 32, 86, 0.70) 55.11%, #7BB2CA 99.91%);
+        box-shadow: 4px 6px 6px 5px rgba(0, 0, 0, 0.25);
+        width: fit-content;
+        text-align: center;
+        border: none;
+        color: #FFF;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    button:focus,
+    button:active,
+    button:hover {
+        border: none;
+        outline: none;
+    }
+    .container{
+        width: 100%;
+    }
+    body{
+        background: rgba(147, 193, 212, 0.46);
+        height: 100%;
+    }
+    .main {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .automationHeading>h2 {
+        color: #000;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-decoration-line: underline;
+    }
+
+    .automationCard {
+        border-radius: 6px;
+        background: rgba(113, 177, 212, 0.50);
+        backdrop-filter: blur(50px);
+        display: flex;
+        width: 26rem;
+        padding: 2rem;
+    }
+
+    .email {
+        width: 12rem;
+    }
+
+    .email>h3 {
+        color: #000;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .email>ul>li {
+        color: #000;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    .whatsapp {
+        width: 12rem;
+    }
+
+    .whatsapp>h3 {
+        color: #000;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .whatsapp>ul>li {
+        color: #000;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    .scrapingHeading>h2 {
+        color: #000;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-decoration-line: underline;
+    }
+
+    .scrapingCard {
+        border-radius: 6px;
+        background: rgba(113, 177, 212, 0.50);
+        backdrop-filter: blur(50px);
+        display: flex;
+        width: 26rem;
+        padding: 2rem;
+    }
+
+    .linkedin {
+        width: 12rem;
+    }
+
+    .linkedin>h3 {
+        color: #000;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .linkedin>ul>li {
+        color: #000;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    .web {
+        width: 12rem;
+    }
+
+    .web>h3 {
+        color: #000;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .web>ul>li {
+        color: #000;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <section class="main">
+            <div class="automation">
+                <section class="automationHeading">
+                    <h2>AUTOMATION</h2>
+                </section>
+                <section class="automationCard">
+                    <div class="email">
+                        <h3>EMAIL</h3>
+                        <ul>
+                            <li>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                                anything </li>
+                            <li>embarrassing hidden in the middle of text. </li>
+                            <li>All the Lorem Ipsum genth a handful of model sentence structures </li>
+                            <li>generate Lorem Ipsum which looks</li>
+                            <li>reasonable. words.</li>
+                        </ul>
+                        <button onclick="run()">Subscribe</button>
+                    </div>
+                    <div class="whatsapp">
+                        <h3>WHATSAPP</h3>
+                        <ul>
+                            <li>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                                anything </li>
+                            <li>embarrassing hidden in the middle of text. </li>
+                            <li>All the Lorem Ipsum genth a handful of model sentence structures </li>
+                            <li>generate Lorem Ipsum which looks</li>
+                            <li>reasonable. words.</li>
+                        </ul>
+                        <button onclick="run()">Subscribe</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- scrapping -->
+
+            <div class="scrapping">
+                <section class="scrapingHeading">
+                    <h2>SCRAPING</h2>
+                </section>
+                <section class="scrapingCard">
+                    <div class="linkedin">
+                        <h3>LINKEDIN</h3>
+                        <ul>
+                            <li>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                                anything </li>
+                            <li>embarrassing hidden in the middle of text. </li>
+                            <li>All the Lorem Ipsum genth a handful of model sentence structures </li>
+                            <li>generate Lorem Ipsum which looks</li>
+                            <li>reasonable. words.</li>
+                        </ul>
+                        <button onclick="run()">Subscribe</button>
+                    </div>
+                    <div class="web">
+                        <h3>WEB</h3>
+                        <ul>
+                            <li>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                                anything </li>
+                            <li>embarrassing hidden in the middle of text. </li>
+                            <li>All the Lorem Ipsum genth a handful of model sentence structures </li>
+                            <li>generate Lorem Ipsum which looks</li>
+                            <li>reasonable. words.</li>
+                        </ul>
+                        <button onclick="run()">Subscribe</button>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+    const run = () => window.location.href = "../Forms/Payment Information/index.html"
+</script>
+
+</html>

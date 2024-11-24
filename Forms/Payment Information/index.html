@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Payment Information</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <!-- <div class="overlay" id="customOverlay">
+        <div class="modal">
+            <h2>Are you sure you want to continue with the payment?</h2>
+            <button onclick="proceedToNextPage()">OK</button>
+            <button onclick="cancel()">Cancel</button>
+        </div>
+    </div> -->
+    <div class="container">
+        <div class="main">
+            <div class="payinfo">
+                <h1>PAYMENT INFORMATION</h1>
+            </div>
+            <div class="paymethod">
+                <p>Payment method</p>
+            </div>
+            <div class="cardImages">
+                <img src="./images/master 1.png" alt="">
+                <img src="./images/visa 1.png" alt="">
+                <img src="./images/paypal 1.png" alt="">
+            </div>
+            <div class="customerInfo">
+                <section class="inputOne">
+                    <label for="">Cardholder name</label>
+                    <input id="input1" type="text" placeholder="Alice john">
+                </section>
+                <section class="inputtwo">
+                    <label for="">Cardholder number</label>
+                    <input id="input2" type="number" placeholder="1234 5678 8901 3456">
+                </section>
+                <section class="inputthree">
+                    <div class="expiry">
+                        <label for="">Cardholder number</label>
+                        <input id="input3" type="number" placeholder="MM/YYYY">
+                    </div>
+                    <div class="cvv">
+                        <label for="">Cardholder number</label>
+                        <input id="input4" type="number" placeholder="CVV">
+                    </div>
+                </section>
+                <section class="inputfour">
+                    <label for="">Cardholder number</label>
+                    <select name="">
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="India">India</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="USA">USA</option>
+                        <option value="Iran">Iran</option>
+                        <option value="Uk">Uk</option>
+                        <option value="UAE">UAE</option>
+                    </select>
+                </section>
+            </div>
+            <div class="checked">
+                <input type="checkbox">
+                <span>Save my information for future purchase.</span>
+            </div>
+            <div class="buttons">
+                <button id="custom-alert-yes" onclick="proceedToNextPage()">Confirm your order</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let counter = 0; // Initialize counter
+
+    function proceedToNextPage() {
+        let input1 = document.getElementById("input1").value;
+        let input2 = document.getElementById("input2").value;
+        let input3 = document.getElementById("input3").value;
+        let input4 = document.getElementById("input4").value;
+
+        if (input1 == "" || input2 == "" || input3 == "" || input4 == "") {
+            Swal.fire({
+                title: 'Please enter the values'
+            })
+        }
+        else {
+            Swal.fire({
+                title: 'Are you sure you want to continue with the payment?',
+                showDenyButton: true,
+                confirmButtonText: 'OK',
+                denyButtonText: 'Cancel',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                        swal("Welcome User!", "Clicked the button!", "success")
+                            .then((value) => {
+                                if (value === "OK") { // Compare with "OK" directly
+                                    window.location.href = "../../Payment-Success/index.html";
+                                }
+                            });
+                        document.getElementById("input1").value = "";
+                        document.getElementById("input2").value = "";
+                        document.getElementById("input3").value = "";
+                        document.getElementById("input4").value = "";
+                } else if (result.isDenied) {
+                    // Handle the cancel action if needed
+                    window.location.href = "./index.html";
+                    document.getElementById("input1").value = "";
+                    document.getElementById("input2").value = "";
+                    document.getElementById("input3").value = "";
+                    document.getElementById("input4").value = "";
+                }
+            });
+
+        }
+    }
+</script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

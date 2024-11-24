@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <!-- <link rel="stylesheet" href="./global.css" />
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Risque:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto Slab:wght@700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rhodium Libre:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" /> -->
+</head>
+
+<body>
+  <style>
+    .temporary-chart-parent {
+  display: flex;
+  flex-direction: column;
+  margin: 12em;
+  margin-left: 30em !important;
+  /* position: absolute;
+  top: 66px;
+  right: 28.99px; */
+  width: 188.01px;
+  height: 158.01px;
+  text-align: center;
+  color: var(--dark-blue);
+  font-family: var(--font-poppins);
+}
+#progress-bar {
+  width: 0%;
+  height: 20px;
+  background-color: #00B5E2;;
+}
+.progress-bar-h1{
+  font-size: 24px;
+  font-weight: 500;
+  width: 350px;
+  position: relative;
+  right: 60px;
+}
+body{
+  overflow: hidden;
+}
+  </style>
+
+    <div class="temporary-chart-parent">
+      <h1 class="progress-bar-h1" id="scraping">Scraping ...</h1>
+      <div id="progress-bar"></div>
+      <h2 id="counter">1</h2>
+    </div>
+  </div>
+  </div>
+
+  <script>
+    var counter = 1;
+    var progressBar = document.getElementById("progress-bar");
+    var counterElement = document.getElementById("counter");
+
+    function updateCounter() {
+      counterElement.innerText = counter + " /10";
+      progressBar.style.width = (counter * 10) + "%";
+
+      if (counter === 10) {
+        swal("Good job!", "You clicked the button!", "success")
+          .then((value) => {
+            if (value) {
+              // If "OK" button is clicked, navigate to another page
+              window.location.href = "../data/index.html";
+            }
+          });
+        document.getElementById("scraping").innerText = ""
+        document.getElementById("scraping").innerText = "Finished"
+      } else {
+        counter++;
+        setTimeout(updateCounter, 1000);
+      }
+    }
+
+    updateCounter();
+    var vectorIcon = document.getElementById("vectorIcon");
+    if (vectorIcon) {
+      vectorIcon.addEventListener("click", function (e) {
+        // Please sync "homepage options" to the project
+      });
+    }
+
+    var linkedInProfilePictureTips = document.getElementById(
+      "linkedInProfilePictureTips"
+    );
+    if (linkedInProfilePictureTips) {
+      linkedInProfilePictureTips.addEventListener("click", function (e) {
+        // Please sync "account login" to the project
+      });
+    }
+
+    var frameContainer = document.getElementById("frameContainer");
+    if (frameContainer) {
+      frameContainer.addEventListener("click", function (e) {
+        // Please sync "pricing page" to the project
+      });
+    }
+
+    var tEAMText4 = document.getElementById("tEAMText4");
+    if (tEAMText4) {
+      tEAMText4.addEventListener("click", function (e) {
+        // Please sync "homepage options" to the project
+      });
+    }
+  </script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>

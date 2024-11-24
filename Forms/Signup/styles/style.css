@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Risque&family=Roboto:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+/* Google Poppins Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif !important;
+    list-style: none;
+    /* margin: 0 !important; */
+}
+
+a {
+    font-family: 'Righteous', sans-serif !important;
+}
+
+body {
+    overflow-wrap: hidden !important;
+}
+
+header {
+    background: rgba(147, 193, 212, 0.46);
+}
+
+.nav-link {
+    color: black !important;
+    font-size: 18px !important;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid #011662;
+    font-weight: 700 !important;
+}
+
+.dropdown-menu {
+    background: rgba(147, 192, 212, 0.634);
+    border: none !important;
+    margin: 10px;
+}
+
+.dropdown-item:hover {
+    background-color: transparent !important;
+    color: #fff !important;
+}
+
+.btn {
+    width: 208px;
+    height: 50px;
+    flex-shrink: 0;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 10px;
+    background: linear-gradient(90deg,
+            #7bb2ca 14.47%,
+            rgba(5, 32, 86, 0.7) 55.11%,
+            #7bb2ca 99.91%) !important;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: none !important;
+
+}
+
+.profile_image img {
+    width: 80px !important;
+    height: 80px !important;
+    flex-shrink: 0 !important;
+    margin: 0.4rem !important;
+}
+
+.logo {
+    color: #011662;
+    font-family: Risque !important;
+    text-shadow: 4px 4px rgba(0, 0, 0, 0.294);
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    margin-left: 2.1rem !important;
+}
+
+.signUpmain {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Righteous', sans-serif;
+    font-size: 14px;
+    max-width: 25rem;
+    margin: auto;
+}
+
+.signUpcontainer {
+    margin-top: 1rem;
+    border-radius: 30px;
+    background: #FFF !important;
+    width: 400px;
+    border: ridge 1.5px white;
+    padding: 20px;
+}
+
+.signUpcontainer h2 {
+    background: #FFF !important;
+    color: #000;
+    font-family: Righteous;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.signUpcontainer p {
+    background: #FFF !important;
+    color: #50648A !important;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 100%;
+}
+
+.signUpcontainer p span {
+    background: #FFF !important;
+    text-decoration-line: underline;
+}
+
+.form-group {
+    background: #FFF !important;
+}
+
+label,
+input {
+    background: #FFF !important;
+}
+
+.buttons {
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #7BB2CA 14.47%, rgba(5, 32, 86, 0.70) 55.11%, #7BB2CA 99.91%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #FFF !important;
+    width: 100%;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.agreement {
+    color: #50648A;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.agreement span {
+    text-decoration-line: underline;
+}
+
+.checkbox {
+    color: #50648A;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.icon-input {
+    position: relative;
+    width: 20rem;
+}
+
+.icon-input input {
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+
+.icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.one-line {
+    display: flex;
+    background: #FFF !important;
+}
+
+.forgot {
+    margin-left: auto;
+    background: #FFF !important;
+    color: #50648A !important;
+    text-align: right;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 100%;
+    text-decoration-line: underline;
+}
+
+.form-groups>span {
+    font-size: 10px !important;
+    line-height: normal;
+}
